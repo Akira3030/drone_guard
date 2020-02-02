@@ -32,3 +32,15 @@ sudo pip install flask_testing
 ## License
 
 This project is licensed under the MIT License
+
+## Github
+```
+git status
+git add .
+git status
+git commit -m "comentario"
+git push -u origin master
+   Username:
+   Password:
+```
+
