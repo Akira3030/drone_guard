@@ -6,24 +6,36 @@
 import unittest
 import requests
 
+from entrypoint import create_app
+from flask_api import status
+
 from drone_guard_api.application.module_routes.user_cases.abort_route_use_case import AbortRouteUseCase
 from drone_guard_api.application.module_routes.commands_and_queys.commands.abort_route_command import AbortRouteCommand
 
+HEADERS = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+CONTENT_TYPE_JSON = 'application/json'
+
 class EndToEndFindRouteByIdTest(unittest.TestCase):
 
-    URL = 'http://localhost:5002/routes/9'
 
     def setUp(self):
-        pass
-
+        
+        self.app = create_app(config='test')
+        self.client = self.app.test_client()
+        
 
     def tearDown(self):
         pass
 
 
-    def test_find_route_by_id(self):
+    def test_get_all_routes(self):
+        respuesta = self.client.get(
+            "/routes/9", 
+            headers=HEADERS
+        )
 
-        pass
+        self.assertEqual(status.HTTP_200_OK, respuesta.status_code)
+        self.assertEqual(CONTENT_TYPE_JSON, respuesta.content_type)
 
 
 

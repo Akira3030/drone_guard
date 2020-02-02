@@ -5,6 +5,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import Response
+from flask_api import status
 
 import os
 import json
@@ -15,6 +16,8 @@ from drone_guard_api.mock.domain.route.route_mock import RouteMock
 from drone_guard_api.application.module_routes.domain.Route import Route
 from drone_guard_api.application.module_routes.domain.RoutePoints import RoutePoints
 from drone_guard_api.application.module_routes.domain.GeoPoint import GeoPoint
+from drone_guard_api.application.module_routes.domain.RouteId import RouteId
+from drone_guard_api.application.module_routes.domain.RouteAuthor import RouteAuthor
 
 from drone_guard_api.application.module_routes.user_cases.delete_route_user_case import DeleteRouteUserCase
 from drone_guard_api.application.module_routes.user_cases.update_route_use_case import UpdateRouteUseCase
@@ -40,69 +43,173 @@ route_blueprint = Blueprint('module_routes', __name__)
 
 logfile = logging.getLogger('file')
 
+# [DEMO]
+# COTROLLER --> punto de entrada a nuestra aplicación
+#      El única código acoplada al framework (Flask)
+#      Un controlador por dominio (DDD)
+# COMENTARIOS fuera --> hagamos el código expresivo por si mismo
+# CLASES que hagan una cosa y de pocas lineas de código (max.200) --> sentido común
+# Programemos en ingles
+# INJECCIÓN DE DEPENDENCIAS --> invertir la dependencia (desacoplar clases)
+
+
+APP_MESSAGE_HTTP_ERROR_500_JSON = '{"status": 500,"message": "Error to process the request"}'
+APP_MESSAGE_HTTP_OK_200_JSON    = '{"status": 200,"message": "OK"}'
+MIMETYPE_JSON                   = "application/json"
 
 
 @route_blueprint.route("/routes", methods=['GET'])
-def get_all_routes():
+def find_all_routes():
 
-    
-    command = FindAllRoutesQuery()
+    try:
+        command = FindAllRoutesQuery()
+        use_case = FindAllRoutesUseCase(command)
+        routes = use_case.execute()
+        routes_json = json.dumps(routes, default=lambda x: x.__dict__)
 
-    # INJECCIÓN DE DEPENDENCIAS
-    user_case = FindAllRoutesUseCase(command)
-    routes = user_case.execute()
+        return Response(
+            routes_json, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
 
-    routes_json = json.dumps(routes, default=lambda x: x.__dict__)
-
-    return Response(routes_json, mimetype="application/json", status=200)
+    except:
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 @route_blueprint.route("/routes/<string:id>", methods=['GET'])
 def find_route_by_id(id):
 
-    command = FindRouteByIdQuery()
+    try:
+        command = FindRouteByIdQuery()
+        user_case = FindRouteByIdUseCase(command)
+        route = user_case.execute(id)
+        route_json = json.dumps(route, default=lambda x: x.__dict__)
 
-    # INJECCIÓN DE DEPENDENCIAS
-    user_case = FindRouteByIdUseCase(command)
-    route = user_case.execute(id)
+        return Response(
+            route_json, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
 
-    route_json = json.dumps(route, default=lambda x: x.__dict__)
+    except Exception as error:
 
-    return Response(route_json, mimetype="application/json", status=200)
+        logfile.exception(error)
+
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 @route_blueprint.route("/routes/<string:id>", methods=['DELETE'])
 def delete_route_by_id(id):
 
-    command = DeleteRouteCommand()
+    try:
+        command = DeleteRouteCommand()
+        user_case = DeleteRouteUserCase(command)
+        user_case.execute(id)
 
-    # INJECCIÓN DE DEPENDENCIAS
-    user_case = DeleteRouteUserCase(command)
-    user_case.execute(id)
+        return Response(
+            APP_MESSAGE_HTTP_OK_200_JSON,
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
 
-    return '', 200
+    except Exception as error:
+
+        logfile.exception(error)
+
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+@route_blueprint.route("/routes", methods=['POST'])
+def create_route():
+
+    try: 
+        #id_author = request.json['id_author']
+        #id_routhe = request.json['id_route']
+        # ...
+
+        route = Route('mock','mock','mock')
+        #command = CreateteRouteCommand(route)
+        #user_case = CreateRouteUseCase(command)
+        #user_case.execute(route)
+
+        return Response(
+            APP_MESSAGE_HTTP_OK_200_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
+
+    except Exception as error:
+
+        logfile.exception(error)
+
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 
 @route_blueprint.route("/routes/<string:id>", methods=['PUT'])
 def update_route_by_id(id):
 
+    try: 
+        #id_author = request.json['id_author']
+        #id_routhe = request.json['id_route']
+        # ...
 
-    route = Route("Juan Garcia Sanchez", "2", "a")
-    
-    # INJECCIÓN DE DEPENDENCIAS
-    command = UpdateRouteCommand(route)
+        route = Route('mock','mock','mock')
+        #command = UpdateRouteCommand(route)
+        #user_case = UpdateRouteUseCase(command)
+        #user_case.execute(route)
 
-    user_case = UpdateRouteUseCase(command)
-    user_case.execute(route)
+        return Response(
+            APP_MESSAGE_HTTP_OK_200_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
 
-    return "update_route_by_id", 200
+    except Exception as error:
+
+        logfile.exception(error)
+
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
 
 
 @route_blueprint.route("/routes/abort/<string:id>", methods=['GET'])
 def abort_route_by_id(id):
 
-    # INJECCIÓN DE DEPENDENCIAS
-    command = AbortRouteCommand()
+    try:
+        command = AbortRouteCommand()
+        use_case = AbortRouteUseCase(command)
+        use_case.execute(id)
 
-    use_case = AbortRouteUseCase(command)
-    use_case.execute(id)
+        return Response(
+            APP_MESSAGE_HTTP_OK_200_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_200_OK
+        )
 
-    return "abort_route_by_id", 200
+    except Exception as error:
+
+        logfile.exception(error)
+
+        return Response(
+            APP_MESSAGE_HTTP_ERROR_500_JSON, 
+            mimetype=MIMETYPE_JSON, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )

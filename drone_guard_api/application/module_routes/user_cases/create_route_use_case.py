@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# [DEMO] SOLID --> Principio de Responsabilidad Única
+# Esta clase hace una única cosa
+# ventajas --> mejora el mantenimiento y la claridad
 
 class CreateRouteUseCase:
 
@@ -9,8 +12,8 @@ class CreateRouteUseCase:
 
     def execute(self, route):
 
-        # BUSINESS lOGIC HERE
+        # [DEMO] aqui iria la lógica de negocio
 
         self._createRouteCommand.execute(route)
 
-        # BUSINESS lOGIC HERE
+        # [DEMO] aqui iria la lógica de negocio

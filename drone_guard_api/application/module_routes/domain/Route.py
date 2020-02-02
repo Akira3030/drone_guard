@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+#[DEMO] Route es una clase de dominio --> modela nuestra aplicación 
+# Atributos privados --> se les asigna valor usando un constructor
+# Cuidado de no crear "clases anémicas", clases sin comportamiento (serian como DTOs)
+# No usar el patron MVC
+
 class Route():
 
     def __init__(self, route_author, route_id, route_points):

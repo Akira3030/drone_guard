@@ -19,8 +19,10 @@ coverage run -m unittest && coverage report
 ```
 sudo pip install coverage
 sudo pip install html-testRunner
-sudo pip install flask_script
 sudo pip install pyyaml
+sudo pip install flask_api
+sudo pip install flask_script
+sudo pip install flask_testing
 ```
 
 ## Authors
