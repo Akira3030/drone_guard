@@ -49,7 +49,7 @@ git push -u origin master
 ```
 ## Ejemplos Clean Code
 
-### 1) Avoid magic numbers and magic numbers
+### 1) Evitar magic numbers
 --------------------------------------
 Bad:
 What the heck is 86400 for? --> No hardcode
@@ -64,7 +64,7 @@ SECONDS_IN_A_DAY = 86400
 time.sleep(SECONDS_IN_A_DAY)
 ```
 
-### 2) Variable names should reveal intent
+### 2) Los nombres de variables deben revelar intención
 ---------------------------------------
 Bad:
 ```
@@ -107,14 +107,14 @@ Deja el campo más limpio de como te lo encontrastes
 - No más de dos argumentos
 
 ### 5) Command Query Separation
-Las funciones deben hacer algo o devolver algo.
+Las funciones deben hacer algo o devolver algo pero no ambas cosas.
 
-### 6) Prefer Exceptions to Returning Error Codes
+### 6) Mejor Exceptions a devolver Error Codes
 
 ### 7) No usar Switch
 Los switchs hacen n cosas
 
-### 8) Dependency Inversion Principle(SOLID)
+### 8) Pricipio de inversión de dependencias(SOLID)
 Principio de diseño de clases
 "Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
 De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento."
