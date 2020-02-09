@@ -98,6 +98,8 @@ Deja el campo más limpio de como te lo encontrastes
 - No más de dos argumentos
 - Mejor devolver excepciones que códigos de error siempre.
 - No usar Switch --> Los switchs hacen n cosas
+- Encapsular condicionales, evitar poner en los if cadenas de booleanos, mejor una subfunción con un nombre explícito
+- Evitar condicionales negativas
 
 ### 4) Try - except
 
@@ -125,8 +127,9 @@ Los comentarios solo están justificados cuando no somos capaces de expresarnos 
 
 ### 8) Pricipio de inversión de dependencias(SOLID)
 Principio de diseño de clases
-"Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
-De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento."
+- Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
+De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento.
+- Inyección de dependencias –> Un objeto no es responsable de instanciar sus dependencias, lo delega
 
 ```python
 #Injeccion de dependencias
@@ -134,4 +137,11 @@ command = FindAllDocumentsQuery()
 use_case = FindAlldocumentsUseCase(command)
 routes = use_case.execute()
 ```
+
+### 9) Tests
+- Pruebas suficientes, se debe probar todo lo que pueda fallar
+- Usar herramientas de cobertura
+- No ignorar pruebas triviales, sobre todo por su labor de documentación
+-Las pruebas deben ser rápidas (no más de 30 segundos todas)
+
 
