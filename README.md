@@ -276,6 +276,15 @@ Separar el dominio de la aplicación.
  
  ### 5) Excepciones del dominio
  
+  ```python
+ class UserNotFind(Exception):
+    pass
+
+if not self.exist_user_in_bd(user_id):
+    raise UserNotFind('failed to open')
+    # raise UserNotFind
+ ```
+ 
  
  ### 6) Clausulas de guarda
  ```python
