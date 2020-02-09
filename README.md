@@ -150,6 +150,11 @@ routes = use_case.execute()
 - Este tipo de identificadores son útiles para evitar delegar la responsabilidad de generación de IDs a nuestra infraestructura. 
 - Dado que los UUIDs son generados de forma aleatoria, y con una probabilidad despreciable de colisión, podemos hacer que nuestras entidades tengan el identificador como uno de los parámetros necesarios para ser construidos.
 - Con esto hacemos que no sea necesario pasar por el repositorio de base de datos para saber qué identificador tendrá la entidad, con lo que lo podemos esperar incluso desde fuera.
+```
+import uuid 
+
+id_user = uuid.uuid1())
+```
 
 ### 2) Desacoplar del framework
 No estamos obligados a usar la estructura de directorios del framework.
