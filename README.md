@@ -105,5 +105,10 @@ Principio de diseño de clases
 "Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
 De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento."
 
-Injeccion de dependencias
+```
+#Injeccion de dependencias
+command = FindAllDocumentsQuery()
+use_case = FindAlldocumentsUseCase(command)
+routes = use_case.execute()
+```
 
