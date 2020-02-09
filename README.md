@@ -296,17 +296,17 @@ if not self.exist_user_in_bd(user_id):
  ```
  
  ```python
-    class CityNotAllowedException(Exception):
-    		message = 'The city {city} is not allowed'
+ class CityNotAllowedException(Exception):
+     message = 'The city {city} is not allowed'
     		
-    		def __init__(self, city: str) -> None:
-    				self.city = city
-    				super().__init__(self.message.format(city=city))
+     def __init__(self, city: str) -> None:
+         self.city = city
+    	 super().__init__(self.message.format(city=city))
     
 
     	
-    if user.city not in allowed_cities:
-    		raise CityNotAllowedException(user.city)
+  if user.city not in allowed_cities:
+      raise CityNotAllowedException(user.city)
  
   ```
  
