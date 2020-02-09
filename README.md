@@ -99,6 +99,30 @@ Deja el campo más limpio de como te lo encontrastes
 - Mejor devolver excepciones que códigos de error siempre.
 - No usar Switch --> Los switchs hacen n cosas
 
+### 4) Try - except
+
+- Si hay un bloque try/catch mejor simplificarlos extrayendo funciones para cada uno de los bloques.
+- Si hay try/catch en una función no debería haber nada más, si no seguro se está haciendo más de una cosa.
+```
+try:
+    hagoAlgoQuePuedeFallar(); 
+except Exception as error:
+    logfile.exception(error)
+```
+### 5) Comentarios
+Los comentarios solo están justificados cuando no somos capaces de expresarnos con el código.
+
+### 6) Clases
+- El tamaño de los ficheros no debería superar las 200 líneas de media, con un límite máximo en 500.
+- La anchura de las líneas de código, entre 80 y 120 caracteres, no deberíamos hacer scroll horizontal para leer código.
+- Cualquier equipo debería tener unas reglas convenientemente consensuadas.
+
+### 7) Errores
+- Crear clases para los casos especiales en lugar de dejar al código cliente procesar el caso excepcional (patrón caso especial, Fowler).
+- En general no es recomendable devolver null, en su lugar es mejor devolver una excepción o un objeto de caso especial.
+- No usar códigos de error ya que confunden el flujo de ejecución y obligan al invocador a procesarlos inmediatamente.
+
+
 ### 8) Pricipio de inversión de dependencias(SOLID)
 Principio de diseño de clases
 "Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
