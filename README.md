@@ -192,6 +192,37 @@ Separar el dominio de la aplicación.
  ### 4) Testing
  - Diseñar la clase sabiendo que debera ser testeada
  
+ ### 5) Excepciones del dominio
+ 
+ 
+ ### 6) Clausulas de guarda
+ ```python
+ # Código farragoso de leer con multiples niveles de if-else
+ if self.user_is_ready(user_id):
+     if self.is_the_right_moment_to_notify_this_user():
+         if.self ...
+             return ...
+         else:
+             return ...
+       else:
+          ...
+ else:
+    ...
+    
+ # Refactoring con clausulas de guarda
+ if not self.user_is_ready(user_id):
+     raise UserIsNotReady()
+     
+ if not is_the_right_moment_to_notify_this_user():
+     raise ...
+     
+ if ...
+     return ...
+ 
+ 
+ ```
+ 
+ 
  
 
 
