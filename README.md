@@ -141,10 +141,11 @@ routes = use_case.execute()
 ```
 
 ### 9) Tests
-- Pruebas suficientes, se debe probar todo lo que pueda fallar
+- Un asset por test
+- se debe probar todo lo que pueda fallar
 - Usar herramientas de cobertura
 - No ignorar pruebas triviales, sobre todo por su labor de documentación
--Las pruebas deben ser rápidas (no más de 30 segundos todas)
+- Las pruebas deben ser rápidas (no más de 30 segundos todas)
 
 ## :monkey_face: CLEAN ARCHITECTURE, DDD Y CQRS
 
