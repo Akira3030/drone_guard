@@ -6,8 +6,8 @@
 <div>
 
 ## Table of contents
-* [Uso de la aplicación](#Uso-de-la-aplicación)
-* [cLEAN CODE](#CLEAN-CODE)
+* [Uso de la aplicación](#-Uso-de-la-aplicación)
+* [cLEAN CODE](#-CLEAN-CODE)
 * [ CLEAN ARCHITECTURE, DDD Y CQRS](#CLEAN-ARCHITECTURE,-DDD-Y-CQRS)
 * [Dependencias](#dependencias)
 * [Github](#github)
