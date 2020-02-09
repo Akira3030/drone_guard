@@ -35,6 +35,9 @@ coverage run -m unittest && coverage report
 ```
 
 ### Dependencias
+
+requirements.txt --> archivo donde deberiamos meter las dependencias
+
 ```sh
 sudo pip install coverage
 sudo pip install html-testRunner
