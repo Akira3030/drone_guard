@@ -144,4 +144,8 @@ routes = use_case.execute()
 - No ignorar pruebas triviales, sobre todo por su labor de documentación
 -Las pruebas deben ser rápidas (no más de 30 segundos todas)
 
+## :monkey_face: CLEAN ARCHITECTURE
+
+
+
 
