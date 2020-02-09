@@ -43,7 +43,7 @@ sudo pip install flask_testing
 ```
 
 
-## :monkey_face: Uso de Github
+## :monkey_face: GITHUB
 ```sh
 git status
 git add .
@@ -53,7 +53,7 @@ git push -u origin master
    Username:
    Password:
 ```
-## :monkey_face: Ejemplos Clean Code
+## :monkey_face: CLEAN CODE
 
 ### 1) Evitar magic numbers
 --------------------------------------
