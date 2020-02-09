@@ -257,6 +257,7 @@ Separar el dominio de la aplicación.
  ```python
 # Clase obesa o clase dios.
 # Esta clase se salta el principio de responsabilidad única, hace muchas cosas
+
 class UserRepository:
 
     def __init__(self):
@@ -272,17 +273,18 @@ class UserRepository:
     def create_user(self, user):
 
 # Dividimos la clase en varias que hagan una única cosa
+
 class GetAllUserQuery:
 
 class GetUserQuery:
 
-Class DeleteUserCommand:
+class DeleteUserCommand:
 
 class UpdateUserCommnad:
 
 class CreateUserCommand:
 
-  ```
+```
  
 ## code smell
 - Código dificil de entender
