@@ -275,6 +275,10 @@ class UserRepository:
 # Dividimos la clase en varias que hagan una única cosa
 
 class GetAllUserQuery:
+    def __init__(self):
+        ...
+    def execute():
+        ...
 
 class GetUserQuery:
 
