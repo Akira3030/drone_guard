@@ -281,8 +281,7 @@ Separar el dominio de la aplicación.
     pass
 
 if not self.exist_user_in_bd(user_id):
-    raise UserNotFind('failed to open')
-    # raise UserNotFind
+    raise UserNotFind
  ```
  
  
@@ -302,13 +301,12 @@ if not self.exist_user_in_bd(user_id):
     
  # Refactoring con clausulas de guarda --> mucho más facil de leer
  if not self.user_is_ready(user_id):
-     raise UserIsNotReady()
+     raise UserIsNotReady
      
  if not is_the_right_moment_to_notify_this_user():
-     raise ...
-     
- if ...
-     return ...
+     raise UserIsNotRightMomentToNotify
+  
+  ...
  
  ```
  
