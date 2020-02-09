@@ -53,7 +53,7 @@ git push -u origin master
 
 ### 1) Evitar magic numbers
 --------------------------------------
-```
+```python
 # Bad:What the heck is 86400 for? --> No hardcode
 time.sleep(86400);
 
@@ -65,7 +65,7 @@ time.sleep(SECONDS_IN_A_DAY)
 ### 2) Los nombres de variables deben revelar intención
 ---------------------------------------
 
-```
+```python
 # Bad:
 df = pd.read_csv('comercios.csv')
 # Good:
