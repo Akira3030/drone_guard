@@ -286,6 +286,8 @@ if not self.exist_user_in_bd(user_id):
  
  
  ### 6) Clausulas de guarda
+ - Programar sin clausulas else
+ 
  ```python
  # Código farragoso de leer con multiples niveles de if-else
  if self.user_is_ready(user_id):
