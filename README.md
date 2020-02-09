@@ -56,7 +56,6 @@ git push -u origin master
 ## :monkey_face: CLEAN CODE
 
 ### 1) Evitar magic numbers
---------------------------------------
 ```python
 # Bad:What the heck is 86400 for? --> No hardcode
 time.sleep(86400);
@@ -67,7 +66,6 @@ time.sleep(SECONDS_IN_A_DAY)
 ```
 
 ### 2) Los nombres de variables deben revelar intención
----------------------------------------
 
 ```python
 # Bad:
@@ -144,7 +142,20 @@ routes = use_case.execute()
 - No ignorar pruebas triviales, sobre todo por su labor de documentación
 -Las pruebas deben ser rápidas (no más de 30 segundos todas)
 
-## :monkey_face: CLEAN ARCHITECTURE
+## :monkey_face: CLEAN ARCHITECTURE, DDD Y CQRS
+
+### Identificadores UUIDs
+
+Este tipo de identificadores son útiles para evitar delegar la responsabilidad de generación de IDs a nuestra infraestructura. Dado que los UUIDs son generados de forma aleatoria, y con una probabilidad despreciable de colisión, podemos hacer que nuestras entidades tengan el identificador como uno de los parámetros necesarios para ser construidos. Con esto hacemos que no sea necesario pasar por el repositorio de base de datos para saber qué identificador tendrá la entidad, con lo que lo podemos esperar incluso desde fuera.
+
+### Desacoplar del framework
+
+ desacoplarnos de la estructura de directorios marcada por los frameworks, y cómo podemos llegar a hacerlo.
+ 
+ ### Usar atributos de clase privados y sin getters
+ 
+ Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters si no sólo getters).
+ 
 
 
 
