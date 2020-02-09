@@ -280,6 +280,9 @@ Separar el dominio de la aplicación.
  - Diseñar la clase sabiendo que debera ser testeada
  
  ### 5) Excepciones del dominio
+ - Una excepción exprese unívocamente un comportamiento inesperado y pueda capturarse de manera única
+ - Esto nos va a ayudar con la semántica del código y proporcionar unos errores más semánticos
+ - La excepción está hablando nuestro lenguaje de dominio
  
   ```python
  class UserNotFind(Exception):
