@@ -166,7 +166,7 @@ Desacoplarnos de la estructura de directorios marcada por los frameworks, y cóm
 ¿Qué beneficios tiene saltarte esto? si sale una nueva versión del framework.
 Separar el dominio de la aplicación.
  
- ### 3) No usar getters y setters
+ ### 3) Tell don't ask --> no usar getters y setters
  - Añadir un constructor para rellenar los atributos de clase
  - Usar atributos de clase privados y sin setters
  - Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters/getters).
@@ -175,7 +175,7 @@ Separar el dominio de la aplicación.
  - Meter las validaciones de los atributos dentro de las clases. Como metodos privados.
  - El modelo de domino ya no es anemico.
  
- ### 4) Esconder los deatalles de implentación de las clases
+ ### 4) Tell don't ask --> esconder los deatalles de implentación de las clases
  - Si modificamos algun metodo privado de nuestra clase ese cambio no afectara a otras clases.
  - Si hay muchas otras clases que usen metodos de nuestras clases cuando cambiemos esos metodos tambien tendremos que cambiar el resto de clases que la usan (por eso hay que evitar el acoplamiento entre clases).
  
