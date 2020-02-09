@@ -94,15 +94,10 @@ Deja el campo más limpio de como te lo encontrastes
 ### 4) Funciones
 - 20 lineas de largo
 - Hacer una única cosa
+- Command Query Separation --> Las funciones deben hacer algo o devolver algo pero no ambas cosas.
 - No más de dos argumentos
-
-### 5) Command Query Separation
-Las funciones deben hacer algo o devolver algo pero no ambas cosas.
-
-### 6) Mejor Exceptions a devolver Error Codes
-
-### 7) No usar Switch
-Los switchs hacen n cosas
+- Mejor devolver excepciones que códigos de error siempre.
+- No usar Switch --> Los switchs hacen n cosas
 
 ### 8) Pricipio de inversión de dependencias(SOLID)
 Principio de diseño de clases
