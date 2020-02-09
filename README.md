@@ -44,6 +44,11 @@ sudo pip install flask_script
 sudo pip install flask_testing
 ```
 
+### Arquitectura
+El código esta dividido en modulos
+
+Bounded Context (Contexto Delimitado) --> nace con DDD --> la idea es que cuando se tienen modelos grandes  estas se dividan en contextos delimitados
+
 
 ## Github
 ```sh
@@ -56,7 +61,7 @@ git push -u origin master
    Password:
 ```
 
- ## Problemas y solciones
+ ## Problemas y soluciones
  
  ### Problemas
 - Evitar el código espagueti
@@ -266,7 +271,7 @@ Separar el dominio de la aplicación.
  
  
  
- ### 4) Modelo de domios anemicos
+ ### 4) Modelo de domios anemicos (anti-patrón de DDD)
  - Solo tienen atributos sin comportamiento
  - Por lo tanto son DTOs (Data Transfer Objectos)
  
