@@ -105,8 +105,11 @@ Deja el campo más limpio de como te lo encontrastes
 - Si hay try/catch en una función no debería haber nada más, si no seguro se está haciendo más de una cosa.
 ```python
 try:
-    hagoAlgoQuePuedeFallar(); 
+    hagoAlgoQuePuedeFallar()
 except Exception as error:
+    logError(error)
+    
+def logError(Exception e):
     logfile.exception(error)
 ```
 ### 5) Comentarios
@@ -163,8 +166,10 @@ Desacoplarnos de la estructura de directorios marcada por los frameworks, y cóm
 ¿Qué beneficios tiene saltarte esto? si sale una nueva versión del framework.
 Separar el dominio de la aplicación.
  
- ### 3) Usar atributos de clase privados y sin getters
- Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters si no sólo getters).
+ ### 3) No usar getters y setters
+ - Añadir un constructor para rellenar los atributos de clase
+ - Usar atributos de clase privados y sin setters
+ - Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters si no sólo getters).
  
  ### 4) Testing
  Diseñar la clase sabiendo que debera ser testeada
