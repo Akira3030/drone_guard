@@ -169,10 +169,21 @@ Separar el dominio de la aplicación.
  ### 3) No usar getters y setters
  - Añadir un constructor para rellenar los atributos de clase
  - Usar atributos de clase privados y sin setters
- - Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters si no sólo getters).
+ - Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters/getters).
+ - Si no lo hacemos asi podrian darse estados incosistentes de nuestro monedo de dominio: por ejemplo crear un usuario sin email.
+ - Hacer los atributos privados, no accesibles desde fuera.
+ - Meter las validaciones de los atributos dentro de las clases. Como metodos privados.
+ - El modelo de domino ya no es anemico.
+ 
+ ### 4) Modelo de domios anemicos
+ - Solo tienen atributos sin comportamiento
+ - Por lo tanto son DTOs (Data Transfer Objectos)
+ 
  
  ### 4) Testing
  Diseñar la clase sabiendo que debera ser testeada
+ 
+ 
 
 
 
