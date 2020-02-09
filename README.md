@@ -232,7 +232,7 @@ Separar el dominio de la aplicación.
 - Rediseño a bajo nivel --> clean code
 - Rediseño a alto nivel --> clean arquitecture
 - Rediseño de procesos --> integración continua,etc
-- Transferencia de conocimiento --> hacer charlas formativas --> rethinking code con casos prácticos (dos horas semanales)
+- Transferencia de conocimiento --> charlas formativas --> Rethinking Code con casos prácticos (dos horas semanales)
 
 ### Rediseño a bajo nivel
 - Clean code
