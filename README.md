@@ -209,7 +209,7 @@ Separar el dominio de la aplicación.
  else:
     ...
     
- # Refactoring con clausulas de guarda
+ # Refactoring con clausulas de guarda --> mucho más facil de leer
  if not self.user_is_ready(user_id):
      raise UserIsNotReady()
      
@@ -219,12 +219,5 @@ Separar el dominio de la aplicación.
  if ...
      return ...
  
- 
  ```
- 
- 
- 
-
-
-
 
