@@ -1,5 +1,5 @@
 <h1 align="center">
-  🐘🎯 Drone Guard ejemplo para Clean Code & Refactoring & Clean Architecture 
+  🐘🎯 Drone Guard: ejemplo de Clean Code & Refactoring & Clean Architecture en Python
 </h1>
 
 ## Table of contents
@@ -49,7 +49,7 @@ git push -u origin master
    Username:
    Password:
 ```
-## Ejemplos Clean Code
+## :large_blue_circle: Ejemplos Clean Code
 
 ### 1) Evitar magic numbers
 --------------------------------------
