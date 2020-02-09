@@ -52,6 +52,7 @@ git push -u origin master
    Username:
    Password:
 ```
+
 ## clean code
 
 ### 1) Evitar magic numbers
@@ -221,6 +222,28 @@ Separar el dominio de la aplicación.
  ```
  
  ## code smell
+ 
+ ### Problemas
+- Código altamente acoplado: al framework, a librerias y entre las clases
+- Sobre carga de responsabilidades: ejemplo controladores obesos
+- Violación del SRP (por lo de arriba)
+
+### Solución
+- Rediseño a bajo nivel
+- Rediseño a bajo nivel
+- Rediseño de procesos --> integración continua,etc
+- Transferencia de conocimiento --> hacer charlas formativas
+
+### Rediseño a bajo nivel
+- Clean code
+- Code Smell
+- Refactoring
+- Principios SOLID
+- Tell don't ask
+
+### Rediseño a alto nivel (arquitectura)
+- Arquitectura hexagonal
+
  
  
 
