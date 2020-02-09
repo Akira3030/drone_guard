@@ -1,7 +1,9 @@
 <div>
     <h1 align="center">:snake: Python :snake:</h1>
+    <h1 align="center">Drone Guard</h1>
+    <h2 align="center">Un ejemplo para aprender de</h2>
     <h1 align="center">
-        Drone Guard: Clean Code & SOLID & Refactoring & Clean Architecture & Code Smell
+        Clean Code & SOLID & Refactoring & Clean Architecture & Code Smell
     </h1>
 <div>
 
