@@ -1,7 +1,7 @@
 <div>
     <h1 align="center">:snake: Python :snake:</h1>
     <h1 align="center">
-        Drone Guard: ejemplo de Clean Code & Refactoring & Clean Architecture en
+        Drone Guard: Clean Code & Refactoring & Clean Architecture & code smell
     </h1>
 <div>
 
