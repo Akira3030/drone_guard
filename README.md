@@ -1,7 +1,7 @@
 <div>
     <h1 align="center">:snake: Python :snake:</h1>
     <h1 align="center">
-        Drone Guard: Clean Code & Refactoring & Clean Architecture & Code Smell
+        Drone Guard: Clean Code & SOLID & Refactoring & Clean Architecture & Code Smell
     </h1>
 <div>
 
@@ -10,6 +10,7 @@
 * [Github](#github)
 * [Problemas y soluciones](#problemas-y-soluciones)
 * [Clean code](#clean-code)
+* [SOLID](#solid)
 * [Clean architecture](#clean-architecture)
 * [Code smell](#code-smell)
 
@@ -150,8 +151,16 @@ def logError(Exception e):
 - En general no es recomendable devolver null, en su lugar es mejor devolver una excepción o un objeto de caso especial.
 - No usar códigos de error ya que confunden el flujo de ejecución y obligan al invocador a procesarlos inmediatamente.
 
+### 8) Tests
+- Un assert por test
+- se debe probar todo lo que pueda fallar
+- Usar herramientas de cobertura
+- No ignorar pruebas triviales, sobre todo por su labor de documentación
+- Las pruebas deben ser rápidas (no más de 30 segundos todas)
 
-### 8) Pricipio de inversión de dependencias(SOLID)
+## SOLID
+
+### 1) Pricipio de inversión de dependencias
 Principio de diseño de clases
 - Nuestras clases deben depender de abstracciones, nunca de detalles concretos. 
 De esta forma podremos tener nuestras entidades desacopladas facilitando su mantenimiento.
@@ -164,12 +173,59 @@ use_case = FindAlldocumentsUseCase(command)
 routes = use_case.execute()
 ```
 
-### 9) Tests
-- Un assert por test
-- se debe probar todo lo que pueda fallar
-- Usar herramientas de cobertura
-- No ignorar pruebas triviales, sobre todo por su labor de documentación
-- Las pruebas deben ser rápidas (no más de 30 segundos todas)
+### 2) Principio de responsabilidad única
+
+ ```python
+# Clase obesa o clase dios.
+# Esta clase se salta el principio de responsabilidad única, hace muchas cosas
+
+class UserRepository:
+
+    def __init__(self):
+
+    def get_all_users(self):
+    
+    def get_user(self, user_id):
+    
+    def delete_user(self, user_id):
+    
+    def update_user(self, user):
+    
+    def create_user(self, user):
+
+# Dividimos la clase en varias que hagan una única cosa
+
+class GetAllUserQuery:
+    def __init__(self):
+        ...
+    def execute():
+        ...
+
+class GetUserQuery:
+    def __init__(self):
+        ...
+    def execute():
+        ...
+
+class DeleteUserCommand:
+    def __init__(self):
+        ...
+    def execute():
+        ...
+
+class UpdateUserCommnad:
+    def __init__(self):
+        ...
+    def execute():
+        ...
+
+class CreateUserCommand:
+    def __init__(self):
+        ...
+    def execute():
+        ...
+```
+
 
 ## clean architecture
 
@@ -252,59 +308,6 @@ Separar el dominio de la aplicación.
  - ¿Y si tienes código común?¿heredar?
  - Evitar tener una clase por ejemplo BaseController, BaseManager, UserManager, UserRepository, etc
 
-### 8) Principio de responsabilidad única
-
- ```python
-# Clase obesa o clase dios.
-# Esta clase se salta el principio de responsabilidad única, hace muchas cosas
-
-class UserRepository:
-
-    def __init__(self):
-
-    def get_all_users(self):
-    
-    def get_user(self, user_id):
-    
-    def delete_user(self, user_id):
-    
-    def update_user(self, user):
-    
-    def create_user(self, user):
-
-# Dividimos la clase en varias que hagan una única cosa
-
-class GetAllUserQuery:
-    def __init__(self):
-        ...
-    def execute():
-        ...
-
-class GetUserQuery:
-    def __init__(self):
-        ...
-    def execute():
-        ...
-
-class DeleteUserCommand:
-    def __init__(self):
-        ...
-    def execute():
-        ...
-
-class UpdateUserCommnad:
-    def __init__(self):
-        ...
-    def execute():
-        ...
-
-class CreateUserCommand:
-    def __init__(self):
-        ...
-    def execute():
-        ...
-
-```
  
 ## code smell
 - Código dificil de entender
