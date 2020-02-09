@@ -86,8 +86,7 @@ user.create();
 
 ### 3) La regla del Boy Scout
 
-Deja el campo más limpio de como te lo encontrastes
-(Si no hay Tests tendremos miedo de tocar, no sea que rompamos algo)
+- Deja el campo más limpio de como te lo encontrastes
 
 ### 4) Funciones
 - 20 lineas de largo
@@ -113,7 +112,7 @@ def logError(Exception e):
     logfile.exception(error)
 ```
 ### 5) Comentarios
-Los comentarios solo están justificados cuando no somos capaces de expresarnos con el código.
+- Los comentarios solo están justificados cuando no somos capaces de expresarnos con el código.
 
 ### 6) Clases
 - Nombres de clases: evitar palabras como Manager, Services, Processor, etc
@@ -162,9 +161,9 @@ id_user = uuid.uuid1())
 ```
 
 ### 2) Desacoplar del framework
-No estamos obligados a usar la estructura de directorios del framework.
-Desacoplarnos de la estructura de directorios marcada por los frameworks, y cómo podemos llegar a hacerlo.
-¿Qué beneficios tiene saltarte esto? si sale una nueva versión del framework.
+- No estamos obligados a usar la estructura de directorios del framework.
+- Desacoplarnos de la estructura de directorios marcada por los frameworks, y cómo podemos llegar a hacerlo.
+- ¿Qué beneficios tiene saltarte esto? si sale una nueva versión del framework.
 Separar el dominio de la aplicación.
  
  ### 3) Tell don't ask
@@ -187,7 +186,7 @@ Separar el dominio de la aplicación.
  
  
  ### 4) Testing
- Diseñar la clase sabiendo que debera ser testeada
+ - Diseñar la clase sabiendo que debera ser testeada
  
  
 
