@@ -139,7 +139,7 @@ routes = use_case.execute()
 ```
 
 ### 9) Tests
-- Un asset por test
+- Un assert por test
 - se debe probar todo lo que pueda fallar
 - Usar herramientas de cobertura
 - No ignorar pruebas triviales, sobre todo por su labor de documentación
