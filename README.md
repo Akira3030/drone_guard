@@ -105,7 +105,7 @@ Deja el campo más limpio de como te lo encontrastes
 
 - Si hay un bloque try/catch mejor simplificarlos extrayendo funciones para cada uno de los bloques.
 - Si hay try/catch en una función no debería haber nada más, si no seguro se está haciendo más de una cosa.
-```
+```python
 try:
     hagoAlgoQuePuedeFallar(); 
 except Exception as error:
