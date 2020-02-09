@@ -113,9 +113,14 @@ except Exception as error:
 Los comentarios solo están justificados cuando no somos capaces de expresarnos con el código.
 
 ### 6) Clases
+- Nombres de clases: evitar palabras como Manager, Services, Processor, etc
+- Un nombre de clase no debe tener un verbo
 - El tamaño de los ficheros no debería superar las 200 líneas de media, con un límite máximo en 500.
 - La anchura de las líneas de código, entre 80 y 120 caracteres, no deberíamos hacer scroll horizontal para leer código.
 - Cualquier equipo debería tener unas reglas convenientemente consensuadas.
+
+
+Classes and objects should have noun or noun phrase names like Customer, WikiPage, Account, and AddressParser. Avoid words like Manager, Processor, Data, or Info in the name of a class. A class name should not be a verb.
 
 ### 7) Errores
 - Crear clases para los casos especiales en lugar de dejar al código cliente procesar el caso excepcional (patrón caso especial, Fowler).
@@ -146,7 +151,9 @@ routes = use_case.execute()
 
 ### Identificadores UUIDs
 
-Este tipo de identificadores son útiles para evitar delegar la responsabilidad de generación de IDs a nuestra infraestructura. Dado que los UUIDs son generados de forma aleatoria, y con una probabilidad despreciable de colisión, podemos hacer que nuestras entidades tengan el identificador como uno de los parámetros necesarios para ser construidos. Con esto hacemos que no sea necesario pasar por el repositorio de base de datos para saber qué identificador tendrá la entidad, con lo que lo podemos esperar incluso desde fuera.
+- Este tipo de identificadores son útiles para evitar delegar la responsabilidad de generación de IDs a nuestra infraestructura. 
+- Dado que los UUIDs son generados de forma aleatoria, y con una probabilidad despreciable de colisión, podemos hacer que nuestras entidades tengan el identificador como uno de los parámetros necesarios para ser construidos.
+- Con esto hacemos que no sea necesario pasar por el repositorio de base de datos para saber qué identificador tendrá la entidad, con lo que lo podemos esperar incluso desde fuera.
 
 ### Desacoplar del framework
 No estamos obligados a usar la estructura de directorios del framework.
@@ -155,9 +162,10 @@ Desacoplarnos de la estructura de directorios marcada por los frameworks, y cóm
 Separar el dominio de la aplicación.
  
  ### Usar atributos de clase privados y sin getters
- 
  Evitar exponer la escritura de sus atributos (hacerlos privados, y no tener setters si no sólo getters).
  
+ ### Testing
+ Diseñar la clase sabiendo que debera ser testeada
 
 
 
