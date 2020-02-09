@@ -14,7 +14,7 @@
 * [Ejemplos Clean Code](#ejemplos-clean-code)
 
 
-## :large_blue_circle: Uso de la aplicación
+## :monkey_face: Uso de la aplicación
 
 ### Ejecutar la aplicacion
 entrypoint.py
@@ -43,7 +43,7 @@ sudo pip install flask_testing
 ```
 
 
-## :large_blue_circle: Uso de Github
+## :monkey_face: Uso de Github
 ```sh
 git status
 git add .
@@ -53,7 +53,7 @@ git push -u origin master
    Username:
    Password:
 ```
-## :large_blue_circle: Ejemplos Clean Code
+## :monkey_face: Ejemplos Clean Code
 
 ### 1) Evitar magic numbers
 --------------------------------------
