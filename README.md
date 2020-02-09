@@ -15,7 +15,7 @@
 * [Code smell](#code-smell)
 
 
-## uso de la aplicación
+## Uso de la aplicación
 
 ### Ejecutar la aplicacion
 entrypoint.py
