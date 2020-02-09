@@ -6,15 +6,16 @@
 <div>
 
 ## Table of contents
-* [Uso de la aplicación](#-Uso-de-la-aplicación)
-* [cLEAN CODE](#-CLEAN-CODE)
+* [Uso de la aplicación](#uso-de-la-aplicación)
+* [Github](#github)
+* [Clean code](#clean-code)
 * [ CLEAN ARCHITECTURE, DDD Y CQRS](#CLEAN-ARCHITECTURE,-DDD-Y-CQRS)
 * [Dependencias](#dependencias)
 * [Github](#github)
 * [Ejemplos Clean Code](#ejemplos-clean-code)
 
 
-## :monkey_face: Uso de la aplicación
+## uso de la aplicación
 
 ### Ejecutar la aplicacion
 entrypoint.py
@@ -43,7 +44,7 @@ sudo pip install flask_testing
 ```
 
 
-## :monkey_face: GITHUB
+## github
 ```sh
 git status
 git add .
@@ -53,7 +54,7 @@ git push -u origin master
    Username:
    Password:
 ```
-## :monkey_face: CLEAN CODE
+## clean code
 
 ### 1) Evitar magic numbers
 ```python
