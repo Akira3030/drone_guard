@@ -14,22 +14,22 @@
 
 ## Ejecutar la aplicacion
 entrypoint.py
-```
+```bash
 /usr/bin/python3 /home/miguelgranadino/Escritorio/drone_guard/entrypoint.py
 ```
 
 ## Ejecutar los tests
-```
+```bash
 python -m unittest -v
 ```
 
 ## Test Coverage
-```
+```bash
 coverage run -m unittest && coverage report
 ```
 
 ## Dependencias
-```
+```bash
 sudo pip install coverage
 sudo pip install html-testRunner
 sudo pip install pyyaml
@@ -40,7 +40,7 @@ sudo pip install flask_testing
 
 
 ## Github
-```
+```bash
 git status
 git add .
 git status
@@ -77,9 +77,9 @@ addCmt
 addComment
 
 # Bad:
-user->createUser() --> User es redundante
+user.createUser() --> User es redundante
 # Good:
-user->create();
+user.create();
 ```
 
 ### 3) La regla del Boy Scout
