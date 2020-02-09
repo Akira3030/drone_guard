@@ -180,6 +180,10 @@ Separar el dominio de la aplicación.
  - Si modificamos algun metodo privado de nuestra clase ese cambio no afectara a otras clases.
  - Si hay muchas otras clases que usen metodos de nuestras clases cuando cambiemos esos metodos tambien tendremos que cambiar el resto de clases que la usan (por eso hay que evitar el acoplamiento entre clases).
  
+ [TellDontAsk](https://martinfowler.com/bliki/TellDontAsk.html)
+ 
+ 
+ 
  ### 4) Modelo de domios anemicos
  - Solo tienen atributos sin comportamiento
  - Por lo tanto son DTOs (Data Transfer Objectos)
