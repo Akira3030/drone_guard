@@ -9,10 +9,8 @@
 * [Uso de la aplicación](#uso-de-la-aplicación)
 * [Github](#github)
 * [Clean code](#clean-code)
-* [ CLEAN ARCHITECTURE, DDD Y CQRS](#CLEAN-ARCHITECTURE,-DDD-Y-CQRS)
-* [Dependencias](#dependencias)
-* [Github](#github)
-* [Ejemplos Clean Code](#ejemplos-clean-code)
+* [Clean architecture](#clean-architecture)
+* [Code smell](#code-smell)
 
 
 ## uso de la aplicación
@@ -147,7 +145,7 @@ routes = use_case.execute()
 - No ignorar pruebas triviales, sobre todo por su labor de documentación
 - Las pruebas deben ser rápidas (no más de 30 segundos todas)
 
-## :monkey_face: CLEAN ARCHITECTURE, DDD Y CQRS
+## clean architecture
 
 ### 1) Identificadores UUIDs
 
@@ -222,7 +220,7 @@ Separar el dominio de la aplicación.
  
  ```
  
- ## :monkey_face: CODE SMELL
+ ## code smell
  
  
 
