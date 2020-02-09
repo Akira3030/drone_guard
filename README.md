@@ -11,24 +11,25 @@
 * [Ejemplos Clean Code](#ejemplos-clean-code)
 
 
+## :large_blue_circle: Uso de la aplicación
 
-## Ejecutar la aplicacion
+### Ejecutar la aplicacion
 entrypoint.py
 ```sh
 /usr/bin/python3 /home/miguelgranadino/Escritorio/drone_guard/entrypoint.py
 ```
 
-## Ejecutar los tests
+### Ejecutar los tests
 ```sh
 python -m unittest -v
 ```
 
-## Test Coverage
+### Covertura de los tests
 ```sh
 coverage run -m unittest && coverage report
 ```
 
-## Dependencias
+### Dependencias
 ```sh
 sudo pip install coverage
 sudo pip install html-testRunner
@@ -39,7 +40,7 @@ sudo pip install flask_testing
 ```
 
 
-## Github
+## :large_blue_circle: Uso de Github
 ```sh
 git status
 git add .
