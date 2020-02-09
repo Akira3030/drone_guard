@@ -221,9 +221,17 @@ Separar el dominio de la aplicación.
  
  ```
  
+ ### 7) Composición sobre herencia
+ 
+ - Mejor componer las clases a heredar de otras clases
+ - ¿Y si tienes código común?¿heredar?
+ - Evitar tener una clase por ejemplo BaseController, BaseManager, UserManager, UserRepository, etc
+ - 
+ 
  ## code smell
  
  ### Problemas
+- Evitar el código espagueti
 - Código altamente acoplado: al framework, a librerias y entre las clases
 - Sobre carga de responsabilidades: ejemplo controladores obesos
 - Violación del SRP (por lo de arriba)
