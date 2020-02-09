@@ -175,6 +175,10 @@ Separar el dominio de la aplicación.
  - Meter las validaciones de los atributos dentro de las clases. Como metodos privados.
  - El modelo de domino ya no es anemico.
  
+ ### 4) Esconder los deatalles de implentación de las clases
+ - Si modificamos algun metodo privado de nuestra clase ese cambio no afectara a otras clases.
+ - Si hay muchas otras clases que usen metodos de nuestras clases cuando cambiemos esos metodos tambien tendremos que cambiar el resto de clases que la usan (por eso hay que evitar el acoplamiento entre clases).
+ 
  ### 4) Modelo de domios anemicos
  - Solo tienen atributos sin comportamiento
  - Por lo tanto son DTOs (Data Transfer Objectos)
