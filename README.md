@@ -1,5 +1,5 @@
 <div>
-    <h1 align="center">:snake: **Python** :snake:</h1>
+    <h1 align="center">:snake: Python :snake:</h1>
     <h1 align="center">Drone Guard</h1>
     <h2 align="center">un ejemplo para aprender de</h2>
     <h1 align="center">Clean Code & SOLID & Refactoring & Clean Architecture & Code Smell</h1>
@@ -60,7 +60,7 @@ git push -u origin master
  
  ### Problemas
 - Evitar el código espagueti
-- Código altamente acoplado: al framework, a librerias y entre las clases
+- **Código altamente acoplado**: al framework, a librerias y entre las clases
 - Sobre carga de responsabilidades: ejemplo controladores obesos
 - Violación del SRP (por lo de arriba)
 
