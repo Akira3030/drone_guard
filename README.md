@@ -6,12 +6,6 @@
 <div>
     
 
-
-
-## Noticias Importantes
-* Las rutas de archivo en la rama `master` **no** son consideradas estables. [Verifica las referencias URI de tu repositorio](#unstable-file-paths)
-* Clonar este repositorio **no** es recomendado ([debido al tamaño del Repo](#option-5-clone-the-repo)) al menos que tu vayas a [contribuir al desarrollo](#contributing)
-
 ## Table of contents
 * [Uso de la aplicación](#uso-de-la-aplicación)
 * [Github](#github)
