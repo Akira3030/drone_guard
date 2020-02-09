@@ -6,9 +6,9 @@
 <div>
 
 ## Table of contents
-* [Ejecutar la aplicación](#ejecutar-la-aplicacion)
-* [Ejecutar los tests](#ejecutar-los-tests)
-* [Tests Coverage](#tests-coverage)
+* [Uso de la aplicación](#Uso-de-la-aplicación)
+* [cLEAN CODE](#CLEAN-CODE)
+* [ CLEAN ARCHITECTURE, DDD Y CQRS](#CLEAN-ARCHITECTURE,-DDD-Y-CQRS)
 * [Dependencias](#dependencias)
 * [Github](#github)
 * [Ejemplos Clean Code](#ejemplos-clean-code)
@@ -220,4 +220,8 @@ Separar el dominio de la aplicación.
      return ...
  
  ```
+ 
+ ## :monkey_face: CODE SMELL
+ 
+ 
 
