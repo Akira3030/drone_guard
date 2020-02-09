@@ -5,10 +5,7 @@
     <h1 align="center">Clean Code & SOLID & Refactoring & Clean Architecture & Code Smell</h1>
 <div>
     
-<p align="center">
-  <img src="images/sankey-glyphs-combined-diagram.svg" alt="Diagrama @SankeyMATIC" />
-</p>
-<sub><i>Diagrama creado usando <a href="http://sankeymatic.com/" title="SankeyMATIC (BETA): Un contructor de diagramas Sankey para todos">@SankeyMATIC</a></i></sub>
+
 
 
 ## Noticias Importantes
