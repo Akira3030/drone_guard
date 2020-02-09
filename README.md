@@ -1,7 +1,7 @@
 <div>
     <h1 align="center">:snake: Python :snake:</h1>
     <h1 align="center">
-        Drone Guard: Clean Code & Refactoring & Clean Architecture & code smell
+        Drone Guard: Clean Code & Refactoring & Clean Architecture & Code Smell
     </h1>
 <div>
 
