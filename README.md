@@ -14,22 +14,22 @@
 
 ## Ejecutar la aplicacion
 entrypoint.py
-```bash
+```sh
 /usr/bin/python3 /home/miguelgranadino/Escritorio/drone_guard/entrypoint.py
 ```
 
 ## Ejecutar los tests
-```bash
+```sh
 python -m unittest -v
 ```
 
 ## Test Coverage
-```bash
+```sh
 coverage run -m unittest && coverage report
 ```
 
 ## Dependencias
-```bash
+```sh
 sudo pip install coverage
 sudo pip install html-testRunner
 sudo pip install pyyaml
@@ -40,7 +40,7 @@ sudo pip install flask_testing
 
 
 ## Github
-```bash
+```sh
 git status
 git add .
 git status
