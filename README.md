@@ -291,7 +291,10 @@ if not self.exist_user_in_bd(user_id):
  
  
  ### 6) Clausulas de guarda
- - Programar sin clausulas else
+
+<p>
+Una clausula de guarda es una pieza de código que normalmente está al comienzo del método y comprueba una serie de condiciones para continuar con la ejecución o cortarla. Es muy usada cuando programamos sin usar else (lo cual es una muy buena práctica para mantener un código limpio y entendible), cuando no queremos tener muchos niveles de identación del código y para ayudar a mejorar la legibilidad y semántica del código.
+</p>
  
  ```python
  # Código farragoso de leer con multiples niveles de if-else
@@ -307,6 +310,9 @@ if not self.exist_user_in_bd(user_id):
     ...
     
  # Refactoring con clausulas de guarda --> mucho más facil de leer
+ if len(user_id) < 1:
+     raise UserIdFormatError
+     
  if not self.user_is_ready(user_id):
      raise UserIsNotReady
      
