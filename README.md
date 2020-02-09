@@ -114,13 +114,9 @@ Los comentarios solo están justificados cuando no somos capaces de expresarnos 
 
 ### 6) Clases
 - Nombres de clases: evitar palabras como Manager, Services, Processor, etc
-- Un nombre de clase no debe tener un verbo
 - El tamaño de los ficheros no debería superar las 200 líneas de media, con un límite máximo en 500.
 - La anchura de las líneas de código, entre 80 y 120 caracteres, no deberíamos hacer scroll horizontal para leer código.
-- Cualquier equipo debería tener unas reglas convenientemente consensuadas.
-
-
-Classes and objects should have noun or noun phrase names like Customer, WikiPage, Account, and AddressParser. Avoid words like Manager, Processor, Data, or Info in the name of a class. A class name should not be a verb.
+- El equipo debería tener unas reglas convenientemente consensuadas.
 
 ### 7) Errores
 - Crear clases para los casos especiales en lugar de dejar al código cliente procesar el caso excepcional (patrón caso especial, Fowler).
