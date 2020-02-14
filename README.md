@@ -356,6 +356,30 @@ Una clausula de guarda es una pieza de código que normalmente está al comienzo
 - Código dificil de modificar
 - 
 
+## Writing faster Python
+
+### Ordenar una lista
+
+ ```python
+sorted(MILLION_RANDOM_NUMBERS) # 467ms
+MILLION_RANDOM_NUMBERS.sort() # 77.6 ms (6 veces más rapido)
+ ```
+ 
+### Validar si una lista esta vacia
+
+ ```python
+if len(mi_lista) == 0 # 91.7ns
+
+if mi_lista == [] # 56.3 ns
+
+if not a mi_lista # 32.4ns
+
+ ```
+
+ 
+ 
+ 
+ 
  
  
 
