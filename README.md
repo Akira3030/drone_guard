@@ -49,6 +49,9 @@ sudo pip install flask_script
 sudo pip install flask_testing
 sudo pip install flask-sqlalchemy
 ```
+```sh
+pip install -r requirements.txt
+```
 
 ### Arquitectura
 El código esta dividido en modulos
