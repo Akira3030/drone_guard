@@ -47,6 +47,7 @@ sudo pip install pyyaml
 sudo pip install flask_api
 sudo pip install flask_script
 sudo pip install flask_testing
+sudo pip install flask-sqlalchemy
 ```
 
 ### Arquitectura
