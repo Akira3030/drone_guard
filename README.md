@@ -361,6 +361,13 @@ Una clausula de guarda es una pieza de código que normalmente está al comienzo
  - Mejor componer las clases a heredar de otras clases
  - ¿Y si tienes código común?¿heredar?
  - Evitar tener una clase por ejemplo BaseController, BaseManager, UserManager, UserRepository, etc
+ 
+ ```python
+ #Composición --> injeccion de dependencias
+command = FindAllDocumentsQuery()
+use_case = FindAlldocumentsUseCase(command)
+routes = use_case.execute()
+ ```
 
  
 ## code smell
