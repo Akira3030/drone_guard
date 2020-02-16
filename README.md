@@ -64,17 +64,22 @@ pip install -r requirements.txt
 
 ## Github
 ```sh
-git status
+
+# Bajarse (clonar) el código del repositorio
+git clone https://github.com/Akira3030/drone_guard
+
+# Commit (local)
 git add .
-git status
 git commit -m "comentario"
+
+# Subir cambios al repositorio
 git push -u origin master
    Username:
    Password:
 git status
-    En la rama master
-    Su rama está actualizada con «origin/master».
-    nothing to commit, working directory clean
+
+# Bajarse los cambios del repositorio
+ git pull https://github.com/Akira3030/drone_guard.git master
 ```
 
  ## Problemas y soluciones
