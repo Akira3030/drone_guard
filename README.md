@@ -42,5 +42,9 @@ git commit -m "comentario"
 git push -u origin master
    Username:
    Password:
+git status
+    En la rama master
+    Su rama está actualizada con «origin/master».
+    nothing to commit, working directory clean
 ```
 

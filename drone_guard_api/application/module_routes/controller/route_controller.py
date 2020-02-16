@@ -9,6 +9,7 @@ from flask_api import status
 
 import os
 import json
+import uuid
 import logging.config
 
 from drone_guard_api.mock.domain.route.route_mock import RouteMock
@@ -42,15 +43,6 @@ from drone_guard_api.application.module_routes.commands_and_queys.querys.find_ro
 route_blueprint = Blueprint('module_routes', __name__)
 
 logfile = logging.getLogger('file')
-
-# [DEMO]
-# COTROLLER --> punto de entrada a nuestra aplicación
-#      El única código acoplada al framework (Flask)
-#      Un controlador por dominio (DDD)
-# COMENTARIOS fuera --> hagamos el código expresivo por si mismo
-# CLASES que hagan una cosa y de pocas lineas de código (max.200) --> sentido común
-# Programemos en ingles
-# INJECCIÓN DE DEPENDENCIAS --> invertir la dependencia (desacoplar clases)
 
 
 APP_MESSAGE_HTTP_ERROR_500_JSON = '{"status": 500,"message": "Error to process the request"}'
@@ -97,7 +89,7 @@ def find_route_by_id(id):
 
     except Exception as error:
 
-        logfile.exception(error)
+        logfile.exception("Se ha producido una excepción: %s",error)
 
         return Response(
             APP_MESSAGE_HTTP_ERROR_500_JSON, 
@@ -134,6 +126,7 @@ def delete_route_by_id(id):
 def create_route():
 
     try: 
+        id_route = uuid.uuid1()
         #id_author = request.json['id_author']
         #id_routhe = request.json['id_route']
         # ...
