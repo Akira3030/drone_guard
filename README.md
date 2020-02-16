@@ -56,7 +56,7 @@ pip install -r requirements.txt
 ### Arquitectura
 El código esta dividido en modulos
 
-![alt tag](pic/app.jpg)
+![alt tag](pics/app.jpg)
 
 Bounded Context (Contexto Delimitado) --> nace con DDD --> la idea es que cuando se tienen modelos grandes  estas se dividan en contextos delimitados
 
