@@ -11,7 +11,7 @@
 * [Uso de la aplicación](#uso-de-la-aplicación)
 * [Python - Entornos vistuales](#python-entornos-vistuales)
 * [Github](#github)
-* [Heroku](#heroku)
+* [Heroku CLI](#heroku-cli)
 * [Problemas y soluciones](#problemas-y-soluciones)
 * [Clean code](#clean-code)
 * [SOLID](#solid)
