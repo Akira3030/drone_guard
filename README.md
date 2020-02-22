@@ -11,6 +11,7 @@
 * [Uso de la aplicación](#uso-de-la-aplicación)
 * [Python - Entornos vistuales](#python-entornos-vistuales)
 * [Github](#github)
+* [PaaS](#paas)
 * [Heroku](#heroku)
 * [Docker](#docker)
 * [Problemas y soluciones](#problemas-y-soluciones)
