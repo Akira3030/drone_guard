@@ -129,14 +129,23 @@ El repositorio remoto --> https://git.heroku.com/{app-name}-api-heroku.git</br>
  docker version
 ```
 Dockerfile de ejemplo:
- ```
+ ```sh
+# Imagen a utilizar --> name:tag
+# python es la imagen docker oficial.  
+# tag selecciona el interprete de Python Python 3.6 interpreter instalado en Alpine Linux.
+# The Alpine Linux distribution es usada en vez de Ubuntu Ubuntu porque es de pequeño tamaño.
 FROM python:3.6-alpine
 
+# Ejecuta un comando en el contenedor
+# En este caso de se crea un usuario para no tener que trabajar como root.
 RUN adduser -D microblog
 
+# Crea el directorio de trabajo
 WORKDIR /home/microblog
 
+# Transfiere archivos desde tu maquina al sistema de ficheros del contenedor
 COPY requirements.txt requirements.txt
+# Crea el entorno virtual
 RUN python -m venv venv
 RUN venv/bin/pip install -r requirements.txt
 RUN venv/bin/pip install gunicorn
