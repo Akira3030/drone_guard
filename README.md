@@ -76,7 +76,10 @@ pip install -r requirements.txt
 ## Github
 ```sh
 
-# Bajarse (clonar) el código del repositorio
+# Crear un repositorio
+git init .
+
+# Bajarse (clonar) el código de GitHub
 git clone https://github.com/Akira3030/drone_guard
 
 # Commit (local)
@@ -116,6 +119,9 @@ heroku addons:create heroku-postgresql:hobby-dev
 heroku open
 heroku logs
 ```
+
+URL Generada --> https://{app-name}.herokuapp.com/</br>
+El repositorio remoto --> https://git.heroku.com/{app-name}-api-heroku.git</br>
 
 
  ## Problemas y soluciones
