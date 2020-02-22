@@ -95,9 +95,10 @@ git status
 
 ## Heroku 
 https://www.heroku.com/<br>
+<p>PaaS = platform as a service. Soporta varios lenguajes: Ruby, Java, Node.js, Scala, Clojure, Python, PHP y Go.</p>
 Crear una cuenta en Heroku <br>
 En the Dashboard seleccionar New -> Create new app (se puede hacer con el CLI)<br>
-PaaS = platform as a service. Soporta varios lenguajes: Ruby, Java, Node.js, Scala, Clojure, Python, PHP y Go.<br>
+
 
 ### Heroku CLI
 
