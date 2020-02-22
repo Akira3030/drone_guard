@@ -51,6 +51,7 @@ sudo pip install flask-sqlalchemy
 ```
 ```sh
 pip install -r requirements.txt
+pip list
 ```
 
 ### Diseño del sistema
