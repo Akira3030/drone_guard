@@ -12,6 +12,7 @@
 * [Python - Entornos vistuales](#python-entornos-vistuales)
 * [Github](#github)
 * [Heroku](#heroku)
+* [Docker](#docker)
 * [Problemas y soluciones](#problemas-y-soluciones)
 * [Clean code](#clean-code)
 * [SOLID](#solid)
