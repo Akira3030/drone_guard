@@ -137,6 +137,11 @@ URL Generada --> https://{app-name}.herokuapp.com/</br>
 El repositorio remoto --> https://git.heroku.com/{app-name}-api-heroku.git</br>
 
 ## Docker
+Hay dos versiones de Docker:<br>
+Free community edition (CE) --> la que usaremos<br>
+Enterprise edition (EE)<br>
+
+
 ```sh
  docker version
 ```
@@ -149,7 +154,7 @@ Dockerfile de ejemplo:
 FROM python:3.6-alpine
 
 # Ejecuta un comando en el contenedor
-# En este caso de se crea un usuario para no tener que trabajar como root.
+# En este caso de se crea un usuario (microblog) para no tener que trabajar como root.
 RUN adduser -D microblog
 
 # Crea el directorio de trabajo
@@ -159,23 +164,37 @@ WORKDIR /home/microblog
 COPY requirements.txt requirements.txt
 # Crea el entorno virtual
 RUN python -m venv venv
+# Instala las dependencias de la aplicación
 RUN venv/bin/pip install -r requirements.txt
+# Instala gunicorn --> el servidor web 
 RUN venv/bin/pip install gunicorn
 
 COPY app app
+# install the application in the container
 COPY migrations migrations
 COPY microblog.py config.py boot.sh ./
 RUN chmod +x boot.sh
 
+# Crea la variable de entorno FLASK_APP requerida para usar el comando flask
 ENV FLASK_APP microblog.py
 
 RUN chown -R microblog:microblog ./
+# Hace que el usuario microblog sea el de por defecto
 USER microblog
 
+# Confirura el puerto del contenedor que usara el servidor
 EXPOSE 5000
+# Comando por defecto que se ejecutara cuando el contenedor sea arrancado
 ENTRYPOINT ["./boot.sh"]
- 
  ```
+ 
+```sh
+#!/bin/sh
+source venv/bin/activate
+flask db upgrade
+flask translate compile
+exec gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app
+```
  
  ## Gunicorn
  
