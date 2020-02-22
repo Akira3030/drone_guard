@@ -97,6 +97,17 @@ git status
  git pull https://github.com/Akira3030/drone_guard.git master
 ```
 
+## PaaS
+PaaS = platform as a service --> plataforma como servicio
+### Heroku
+https://www.heroku.com
+### Linode
+https://www.linode.com/
+### DigitalOcean
+https://www.digitalocean.com/
+### AWS Lightsail
+https://aws.amazon.com/es/lightsail/
+
 ## Heroku 
 https://www.heroku.com/<br>
 <p>PaaS = platform as a service. Soporta varios lenguajes: Ruby, Java, Node.js, Scala, Clojure, Python, PHP y Go.</p>
@@ -164,6 +175,9 @@ EXPOSE 5000
 ENTRYPOINT ["./boot.sh"]
  
  ```
+ 
+ ## Gunicorn
+ 
 
 
  ## Problemas y soluciones
