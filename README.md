@@ -50,6 +50,7 @@ sudo pip install flask_testing
 sudo pip install flask-sqlalchemy
 ```
 ```sh
+pip freeze > requirements.txt
 pip install -r requirements.txt
 pip list
 ```
