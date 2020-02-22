@@ -11,7 +11,7 @@
 * [Uso de la aplicación](#uso-de-la-aplicación)
 * [Python - Entornos vistuales](#python-entornos-vistuales)
 * [Github](#github)
-* [Heroku CLI](#heroku-cli)
+* [Heroku](#heroku)
 * [Problemas y soluciones](#problemas-y-soluciones)
 * [Clean code](#clean-code)
 * [SOLID](#solid)
@@ -93,7 +93,15 @@ git status
  git pull https://github.com/Akira3030/drone_guard.git master
 ```
 
-## Heroku CLI
+## Heroku 
+https://www.heroku.com/
+Crear una cuenta en Heroku.
+En the Dashboard seleccionar New -> Create new app (se puede hacer con el CLI)
+PaaS = platform as a service. Soporta varios lenguajes: Ruby, Java, Node.js, Scala, Clojure, Python, PHP y Go.
+
+### Heroku CLI
+
+CLI = Command Line Interface
 ```sh
 heroku login
 # Creamos la aplicación
