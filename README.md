@@ -9,7 +9,9 @@
 
 ## Table of contents
 * [Uso de la aplicación](#uso-de-la-aplicación)
+* [Python - Entornos vistuales](#python-entornos-vistuales)
 * [Github](#github)
+* [Heroku](#heroku)
 * [Problemas y soluciones](#problemas-y-soluciones)
 * [Clean code](#clean-code)
 * [SOLID](#solid)
@@ -63,6 +65,13 @@ pip list
 
 ![alt tag](pics/app.png)
 
+## Python - Entornos vistuales
+```sh
+python -m venv <nombre de nuestro entorno>
+pip freeze > requirements.txt
+pip install -r requirements.txt
+```
+
 
 ## Github
 ```sh
@@ -83,6 +92,22 @@ git status
 # Bajarse los cambios del repositorio
  git pull https://github.com/Akira3030/drone_guard.git master
 ```
+
+## Heroku CLI
+```sh
+heroku login
+# Creamos la aplicación
+heroku create <nombre de tu aplicación heroku>
+# Unir nuestra aplicación con el repositorio git
+heroku git:remote -a <nombre de tu aplicación heroku>
+# Crear BBDD
+heroku addons:create heroku-postgresql:hobby-dev
+# Se creara la variable de entorno --> DATABASE_URL
+
+heroku open
+heroku logs
+```
+
 
  ## Problemas y soluciones
  
