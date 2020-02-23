@@ -9,7 +9,7 @@
 
 ## Table of contents
 * [Uso de la aplicación](#uso-de-la-aplicación)
-* [Python - Entornos vistuales](#python-entornos-vistuales)
+* [Entorno Virtual](#entorno-virtual)
 * [Github](#github)
 * [PaaS](#paas)
 * [Heroku](#heroku)
@@ -63,17 +63,16 @@ pip list
 
 ![alt tag](pics/diseño_sistema.png)
 
-### Arquitectura
+### Arquitectura de la API
 
 ![alt tag](pics/app.png)
 
-## Python - Entornos vistuales
+## Entorno virtual
 ```sh
 python -m venv <nombre de nuestro entorno>
 pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
-
 
 ## Github
 ```sh
