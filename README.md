@@ -140,16 +140,19 @@ heroku login
 heroku create mi-app --region=eu
 # Unir nuestra aplicación con el repositorio git
 heroku git:remote -a mi-app
-# Crear BBDD
+
+# Crear base de datos PostgreSQL
 heroku addons:create heroku-postgresql:hobby-dev
 # Se creara la variable de entorno --> DATABASE_URL
 
 heroku open
 heroku logs --tail
+
 # Elimiar de Heroku nuestra aplicación
 heroku destroy -a  --confirm 
 # Para crear variables de entorno
 heroku config:set CONFIG_VALUE=password
+
 # Ver si se esta ejecutando alguna instancia
 heroku ps:scale web=1
 # Ver releases
