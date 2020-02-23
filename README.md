@@ -120,6 +120,8 @@ En the Dashboard seleccionar New -> Create new app (se puede hacer con el CLI)<b
 
 CLI = Command Line Interface
 ```sh
+heroku help
+
 heroku login
 # Creamos la aplicación
 heroku create <nombre de tu aplicación heroku>
@@ -130,7 +132,11 @@ heroku addons:create heroku-postgresql:hobby-dev
 # Se creara la variable de entorno --> DATABASE_URL
 
 heroku open
-heroku logs
+heroku logs --tail
+# Elimiar de Heroku nuestra aplicación
+heroku destroy -a  --confirm 
+# Para crear variables de entorno
+heroku config:set CONFIG_VALUE=password
 ```
 
 URL Generada --> https://{app-name}.herokuapp.com/</br>
