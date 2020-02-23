@@ -109,6 +109,9 @@ https://www.digitalocean.com/
 ### AWS Lightsail
 https://aws.amazon.com/es/lightsail/
 
+### PythonAnywhere
+https://www.pythonanywhere.com/
+
 ## Heroku 
 https://www.heroku.com/<br>
 <p>PaaS = platform as a service. Soporta varios lenguajes: Ruby, Java, Node.js, Scala, Clojure, Python, PHP y Go.</p>
