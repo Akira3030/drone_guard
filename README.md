@@ -81,7 +81,7 @@ cd entorno3
 source entorno3/bin/activate
 # Sesactivar el entorno virtual
 deactivate
-</br>
+
 # Instalar la última versión de un paquete
 (entorno3)$ pip install django
 # Instalar una versión especifica de un paquete
