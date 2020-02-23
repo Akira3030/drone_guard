@@ -142,6 +142,8 @@ heroku config:set CONFIG_VALUE=password
 URL Generada --> https://{app-name}.herokuapp.com/</br>
 El repositorio remoto --> https://git.heroku.com/{app-name}-api-heroku.git</br>
 
+<p>Cada vez que realizamos el despliegue, pasará todo el proceso de integración continua: Jenkins, Travis, etc</p>
+
 ## Docker
 Hay dos versiones de Docker:<br>
 Free community edition (CE) --> la que usaremos<br>
