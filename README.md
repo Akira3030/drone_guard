@@ -116,7 +116,8 @@ Crear una cuenta en Heroku <br>
 En the Dashboard seleccionar New -> Create new app (se puede hacer con el CLI)<br>
 
 <p>Heroku necesita el fichero Procfile. Que comandos ejecutar para iniciar nuestro sitio web</p>
-```txt
+
+```
 web: gunicorn mysite.wsgi --log-file -
 ```
 
@@ -129,9 +130,9 @@ heroku help
 
 heroku login
 # Creamos la aplicación
-heroku create <nombre de tu aplicación heroku>
+heroku create mi-app --region=eu
 # Unir nuestra aplicación con el repositorio git
-heroku git:remote -a <nombre de tu aplicación heroku>
+heroku git:remote -a mi-app
 # Crear BBDD
 heroku addons:create heroku-postgresql:hobby-dev
 # Se creara la variable de entorno --> DATABASE_URL
