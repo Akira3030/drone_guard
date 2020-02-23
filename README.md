@@ -40,25 +40,6 @@ python -m unittest -v
 coverage run -m unittest && coverage report
 ```
 
-### Dependencias
-
-requirements.txt --> archivo donde deberiamos meter las dependencias
-
-```sh
-sudo pip install coverage
-sudo pip install html-testRunner
-sudo pip install pyyaml
-sudo pip install flask_api
-sudo pip install flask_script
-sudo pip install flask_testing
-sudo pip install flask-sqlalchemy
-```
-```sh
-pip freeze > requirements.txt
-pip install -r requirements.txt
-pip list
-```
-
 ### Diseño del sistema
 
 ![alt tag](pics/diseño_sistema.png)
@@ -95,7 +76,7 @@ deactivate
 # Crear fichero con todas las dependencias
 (entorno3)$ pip freeze > requirements.txt
 # Instalar todas las dependencias y asi tener entornos identicos
-pip install -r requirements.txt
+(entorno4)$ pip install -r requirements.txt
 ```
 
 ## Github
