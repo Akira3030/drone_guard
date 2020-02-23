@@ -68,10 +68,34 @@ pip list
 ![alt tag](pics/app.png)
 
 ## Entorno virtual
+pip --> sistema de gestión de paquetes.</br>
+Python Package Index (PyPI) --> que es el repositorio de paquetes oficial.</br>
+virtualenv --> herramienta para crear entornos virtuales.</br>
+venv --> módulo oficial del lenguaje que a partir de la versión 3.3 nos permite crear entornos virtuales</br>
 ```sh
-python -m venv <nombre de nuestro entorno>
-pip freeze > requirements.txt
-pip install -r requirements.txt
+> apt-get install python3-venv
+# Crear un entorno virtual con python3
+> python3 -m venv entorno3
+cd entorno3
+# Activar el entorno virtual
+> source entorno3/bin/activate
+# Sesactivar el entorno virtual
+> deactivate
+
+# Instalar la última versión de un paquete
+> (entorno3)$ pip install django
+# Instalar una versión especifica de un paquete
+> (entorno3)$ pip install requests=="2.12"
+
+# Paquetes instalados con sus dependencias
+> (entorno3)$ pip list
+# Borrar un paquete
+> (entorno3)$ pip uninstall requests
+
+# Crear fichero con todas las dependencias
+> (entorno3)$ pip freeze > requirements.txt
+# Instalar todas las dependencias y asi tener entornos identicos
+> pip install -r requirements.txt
 ```
 
 ## Github
