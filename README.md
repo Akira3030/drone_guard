@@ -115,6 +115,11 @@ https://www.heroku.com/<br>
 Crear una cuenta en Heroku <br>
 En the Dashboard seleccionar New -> Create new app (se puede hacer con el CLI)<br>
 
+<p>Heroku necesita el fichero Procfile. Que comandos ejecutar para iniciar nuestro sitio web</p>
+```txt
+web: gunicorn mysite.wsgi --log-file -
+```
+
 
 ### Heroku CLI
 
@@ -137,6 +142,13 @@ heroku logs --tail
 heroku destroy -a  --confirm 
 # Para crear variables de entorno
 heroku config:set CONFIG_VALUE=password
+# Ver si se esta ejecutando alguna instancia
+heroku ps:scale web=1
+# Ver releases
+heroku releases
+# Abrir la aplicación
+heroku open
+
 ```
 
 URL Generada --> https://{app-name}.herokuapp.com/</br>
