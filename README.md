@@ -123,14 +123,23 @@ GitHub permite el uso de dominios y subdominios personalizados para publicar cua
 ### Jekyll
 Jekyll es un software de creación de sitios web estáticos, escrito en Ruby por Tom Preston-Werner, uno de los creadores de Github. Podremos tener un sitio web sin base de datos <br>
 _config.yml --> configuración del blog <br>
-carpeta _posts --> donde se alojaran los posts del blog <br>
-nombre de los posts --> year-month-date-{slug}.md, por ejemplo --> 2018-03-04-i-know-how-to-use-jekyll.md
+_posts (directorio) --> donde se alojaran los posts del blog <br>
+nombre de los posts --> year-month-date-{slug}.md, por ejemplo --> 2018-03-04-i-know-how-to-use-jekyll.md <br>
+_site (directorio) --> 
 
 ```
 ---
 layout: post
 title: "I Know How to Use Jekyll"
 ---
+```
+### Liquid
+Jekyll usa Liquid – a templating language that uses objects, tags and filters. We use the object tag surrounded by double braces {{ }} to output front matter variables and a brace and percentage sign for logic {%  %}.
+
+```
+{% for item in site.data.navigation %}
+     <a href="{{ site.baseurl }}/{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+{% endfor %}
 ```
 
 ### Markdown
