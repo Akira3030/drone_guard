@@ -101,6 +101,26 @@ git status
 # Bajarse los cambios del repositorio
  git pull https://github.com/Akira3030/drone_guard.git master
 ```
+## Github - publicar un sitio web
+1.Páginas de usuario u organización --> https://<usuario>.github.io
+2.Páginas de proyecto --> https://<usuario>.github.io/<repositorio>
+
+### Alojar sitio web
+GitHub nos ofrece tres vías para alojar nuestro sitio web en un repositorio:
+
+1.Compilar los archivos de la rama master como un sitio Jekyll.
+2.Usar una rama específica llamada gh-pages para este propósito, que GitHub reconocerá y publicará automáticamente
+3.Usar un directorio /docs en la rama principal del proyecto, que haga las veces de documentación y de sitio web. Estas opciones se pueden seleccionar en la configuración del repositorio, bajo la sección Options > GitHub Pages
+
+### Dominios personalizados
+GitHub permite el uso de dominios y subdominios personalizados para publicar cualquier sitio. Para configurar un dominio, deberemos añadir los registros correctos a nuestros servidores de nombres. Un resumen rápido es el siguiente:
+
+1.Si el dominio es de segundo nivel, es decir, midominio.com o midominio.es por ejemplo, basta con apuntar a las direcciones IP de los servidores de GitHub con registros A. Crea 4 registros A en el host raíz (vacío o @) con las siguientes IPs (o consulta la documentación oficial por si las direcciones han cambiado):
+185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+
+2.Si es un subdominio, es decir, por ejemplo proyecto.midominio.com ay que utilizar un registro CNAME para apuntar directamente al URL proporcionado por GitHub.
+
+
 
 ## PaaS
 PaaS = platform as a service --> plataforma como servicio
