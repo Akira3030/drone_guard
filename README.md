@@ -102,23 +102,39 @@ git status
  git pull https://github.com/Akira3030/drone_guard.git master
 ```
 ## Github - publicar un sitio web
-1.Páginas de usuario u organización --> https://<usuario>.github.io
-2.Páginas de proyecto --> https://<usuario>.github.io/<repositorio>
+1.Páginas de usuario u organización --> https://<usuario>.github.io <br>
+2.Páginas de proyecto --> https://<usuario>.github.io/<repositorio> <br>
 
 ### Alojar sitio web
 GitHub nos ofrece tres vías para alojar nuestro sitio web en un repositorio:
 
-1.Compilar los archivos de la rama master como un sitio Jekyll.
-2.Usar una rama específica llamada gh-pages para este propósito, que GitHub reconocerá y publicará automáticamente
-3.Usar un directorio /docs en la rama principal del proyecto, que haga las veces de documentación y de sitio web. Estas opciones se pueden seleccionar en la configuración del repositorio, bajo la sección Options > GitHub Pages
+1.Compilar los archivos de la rama master como un sitio Jekyll. <br>
+2.Usar una rama específica llamada gh-pages para este propósito, que GitHub reconocerá y publicará automáticamente. <br>
+3.Usar un directorio /docs en la rama principal del proyecto, que haga las veces de documentación y de sitio web. Estas opciones se pueden seleccionar en la configuración del repositorio, bajo la sección Options > GitHub Pages <br>
 
 ### Dominios personalizados
-GitHub permite el uso de dominios y subdominios personalizados para publicar cualquier sitio. Para configurar un dominio, deberemos añadir los registros correctos a nuestros servidores de nombres. Un resumen rápido es el siguiente:
+GitHub permite el uso de dominios y subdominios personalizados para publicar cualquier sitio. Para configurar un dominio, deberemos añadir los registros correctos a nuestros servidores de nombres. Un resumen rápido es el siguiente:<br>
 
 1.Si el dominio es de segundo nivel, es decir, midominio.com o midominio.es por ejemplo, basta con apuntar a las direcciones IP de los servidores de GitHub con registros A. Crea 4 registros A en el host raíz (vacío o @) con las siguientes IPs (o consulta la documentación oficial por si las direcciones han cambiado):
-185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 <br>
 
 2.Si es un subdominio, es decir, por ejemplo proyecto.midominio.com ay que utilizar un registro CNAME para apuntar directamente al URL proporcionado por GitHub.
+
+### Jekyll
+Jekyll es un software de creación de sitios web estáticos, escrito en Ruby por Tom Preston-Werner, uno de los creadores de Github. Podremos tener un sitio web sin base de datos <br>
+_config.yml --> configuración del blog <br>
+carpeta _posts --> donde se alojaran los posts del blog <br>
+nombre de los posts --> year-month-date-{slug}.md, por ejemplo --> 2018-03-04-i-know-how-to-use-jekyll.md
+
+```
+---
+layout: post
+title: "I Know How to Use Jekyll"
+---
+```
+
+### Markdown
+
 
 
 
