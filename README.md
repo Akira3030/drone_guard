@@ -87,6 +87,8 @@ deactivate
 
 https://www.githubstatus.com/
 
+https://help.github.com/es
+
 ```sh
 
 # Crear un repositorio
