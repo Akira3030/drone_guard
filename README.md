@@ -179,13 +179,20 @@ GitHub creará un archivo index.html a partir de readme.md o de index.md. Si se 
 
 ```
 
-Ejemplo archivo markdown (extensión md)
+Ejemplo archivo markdown (extensión md). La parte que esta entre tres guiones sera procesado por jekyll (a esta sección se le llama front matter)
 
 ```
 ---
 layout: post
-title: "I Know How to Use Jekyll"
+title: Título de la publicación
+author: David Charte
+category: programación
+tags:
+  - jekyll
+  - ruby
 ---
+
+¡El contenido de esta publicación es un borrador!
 ```
 
 Tras hacer todos estos cambios, si activamos el proceso de conversión desde la página settings, el resultado debería ser el mismo que cuando hemos creado el sitio web a partir de archivos .html directamente
