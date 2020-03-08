@@ -6,11 +6,6 @@
     <h3 align="center">miguel.granadino@gmail.com</h3>
 <div>
     
-   
-    
-    [a relative link](test1.md)
-    
-    [a link](https://github.com/Akira3030/drone_guard/edit/master/test1.md)
     
 
 ## Table of contents
@@ -26,6 +21,9 @@
 * [Clean architecture](#clean-architecture)
 * [Code smell](#code-smell)
 * [Writing faster Python](#Writing-faster-python)
+
+[a relative link](test1.md)
+[a link](https://github.com/Akira3030/drone_guard/edit/master/test1.md)
 
 
 ## Uso de la aplicación
