@@ -157,6 +157,8 @@ La marca {{ site.title }} será sustuida por el parámetro title definido en el 
 
 La marca {{content}} será sustituida por el texto del archivo markdown, una vez transformado a html.
 
+GitHub creará un archivo index.html a partir de readme.md o de index.md. Si se encuentra con los dos, ignorará readme.md.
+
 ```
 <!DOCTYPE html>
 <html>
