@@ -146,7 +146,13 @@ _site (directorio) -->
 
 _layouts (directorio) --> Hay que crear un archivo html que sirva como plantilla por defecto para las conversiones. Se llamará default.html
 
+css (directorio) --> hojas de estilo
+
 Ejemplo de fichero default.html --> Las marcas delimitadas entre {{ }} serán sustituidas durante el proceso de conversión por los contenidos.
+
+La marca {{ site.title }} será sustuida por el parámetro title definido en el archivo de configuración _config.yml
+
+La marca {{content}} será sustituida por el texto del archivo markdown, una vez transformado a html.
 
 ```
 <!DOCTYPE html>
@@ -166,9 +172,7 @@ Ejemplo de fichero default.html --> Las marcas delimitadas entre {{ }} serán su
 
 ```
 
-css (directorio) --> hojas de estilo
-
-
+Ejemplo archivo markdown (extensión md)
 
 ```
 ---
@@ -176,6 +180,10 @@ layout: post
 title: "I Know How to Use Jekyll"
 ---
 ```
+
+Tras hacer todos estos cambios, si activamos el proceso de conversión desde la página settings, el resultado debería ser el mismo que cuando hemos creado el sitio web a partir de archivos .html directamente
+
+
 ### Liquid
 Jekyll usa Liquid – a templating language that uses objects, tags and filters. We use the object tag surrounded by double braces {{ }} to output front matter variables and a brace and percentage sign for logic {%  %}.
 
